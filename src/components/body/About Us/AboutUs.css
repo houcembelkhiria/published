@@ -1,0 +1,28 @@
+:root {
+
+  --white1:#FFFFF0;
+  --red1 :#DA2430;
+  --red-darker:#490B10;
+  --black1:#000002;
+  --gray1:#555555;
+
+}
+
+.about_us h1{
+    color: var(--red1);
+text-align: center;
+   }
+   .about_us p{
+    font-size: 15px;
+    color:var(--white1);
+    text-align: justify;
+    margin: 15px 200px ;
+   }
+
+   @media screen and (max-width:750px) {
+    .about_us p {
+      font-size: 15px;
+      text-align: justify;
+      margin: 0 15px ;
+    }
+  }

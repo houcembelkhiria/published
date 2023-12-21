@@ -1,0 +1,73 @@
+:root {
+
+    --white:#FFFFF0;
+    --red :#FF0800;
+    --red-darker:#65000B;
+    --black:#000002;
+    --gray:#555555;
+  
+  }
+  .language-toggle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.4s;
+  }
+  
+  .slider.france {
+    background-image: url('../assets/france.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image horizontally and vertically */
+  }
+  
+  .slider.us {
+    background-image: url('../assets/UnitedStates.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image horizontally and vertically */
+  }
+  .slider:before {
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--white);
+    border: solid 4px var(--red);
+    border-radius: 50%;
+    transition: transform 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
